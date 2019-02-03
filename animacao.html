@@ -1,0 +1,29 @@
+<canvas id="tela" width="600" height="400"></canvas>
+<script type="text/javascript">
+	const tela = document.getElementById('tela')
+	const c = tela.getContext('2d')
+
+	const imagem = new Image()
+	imagem.src = "http://www.caelum.com.br/imagens/instrutores/fotos/paulo-silveira-90.jpg"
+
+	const desenhaImagem = (x, y) => c.drawImage(imagem, x, y)
+
+	const circulo = (x, y, raio) => {
+		c.strokeStyle='black'
+		c.beginPath()
+		c.arc(x, y, raio, 0, 2 * Math.PI)
+		c.stroke()
+	}
+
+	const limpaTela = () => c.clearRect(0, 0, 600, 400)
+
+	let x = 1
+
+	const desenha = () => {
+		//limpaTela()
+		circulo(x, 100, x/2)
+		x++
+	}
+
+	setInterval(desenha, 30)
+</script>

@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<script>
+    var mostra = function(frase){
+        document.write(frase);
+        document.write("<br><br>");
+    }
+
+    var sorteia = function(num){
+        return Math.round(Math.random() * num)
+    }
+
+    // exemplos em arrow function
+    let sorteia2 = num => Math.round(Math.random() * num)
+    let mostra2 = frase => document.write(frase + "<br><br>")
+    
+    //var numeroPensado = Math.round(Math.random() * 10);
+    var numeroPensado = sorteia2(10) 
+    var chute = prompt("Já pensei. Qual número você acha que é?");
+    
+    if(isNaN(chute)){
+        mostra('Apenas números são válidos')
+    } else {
+        if(chute == numeroPensado){
+            mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+        } else{
+            mostra2("Você errou! Eu tinha pensado no " + numeroPensado);
+            if(chute > numeroPensado){
+                mostra2('O número ' + chute + ' é maior que ' + numeroPensado)
+            } else {
+                mostra2('O número ' + chute + ' é menor que ' + numeroPensado)
+            }
+        }        
+    }
+
+</script>

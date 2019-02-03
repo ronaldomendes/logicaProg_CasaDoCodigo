@@ -1,0 +1,64 @@
+<meta charset="utf-8">
+<script>
+    document.write("Olá mundo!<br>");
+    document.write('Esse é meu segundo programa<br>');
+</script>
+
+<hr>
+
+<script>
+    document.write("Minha idade é: " + '31 <br>');
+    document.write("Eu nasci em: " + (2018 - 31) + "<br>");
+    document.write('A soma das nossas idades é: ' + (25 + 32 + 26) + "<br>");
+    document.write('A média das nossas idades é: ' + ((25 + 32 + 24) / 3) + "<br>");
+</script>
+
+<hr>
+
+<script>
+    var ano = 2018;
+    
+    document.write("Eu nasci em: " + (ano - 31) + "<br>");
+    document.write("Godofredo nasceu em: " + (ano - 11) + "<br>");
+    document.write("Creuza nasceu em: " + (ano - 42) + "<br>");
+</script>
+
+<hr>
+
+<script>
+    var eu = 31;
+    var godofredo = 11;
+    var creuza = 67;
+    
+    var total = eu + godofredo + creuza;
+    document.write("A soma das idades é: " + total + "<br>");
+    
+    var media = total / 3;
+    document.write("A média é: " + Math.round(media));
+</script>
+
+<hr>
+
+<script>
+    var ano = 2018;
+    
+    document.write("ano <br>");
+    document.write(ano);
+</script>
+
+<hr>
+
+<script>
+    var ano = 2018;
+    
+    var pulaLinha = function(){
+        document.write("<br>");
+    }
+    
+    document.write("Eu nasci em: " + (ano - 31));
+    pulaLinha();
+    document.write("Godofredo nasceu em: " + (ano - 11));
+    pulaLinha();
+    document.write("Creuza nasceu em: " + (ano - 42));
+    pulaLinha();
+</script>

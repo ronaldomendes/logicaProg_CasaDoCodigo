@@ -1,0 +1,22 @@
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script type="text/javascript">
+	const tela = document.getElementById('tela')
+	const c = tela.getContext('2d')
+
+	c.fillStyle = 'grey'
+	c.fillRect(0, 0, 600, 400)
+
+	tela.onmousemove = evento => {
+		let x = evento.pageX - tela.offsetLeft
+		let y = evento.pageY - tela.offsetTop
+
+		c.fillStyle='blue'
+		c.beginPath()
+		c.arc(x, y, 10, 0, 2 * Math.PI)
+		c.fill()
+
+		console.log('Posição: ' + x + ', ' + y)
+	}
+
+</script>
